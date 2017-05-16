@@ -26,7 +26,7 @@ public class Game implements ActionListener, KeyListener{
 
 	public Game(){
 		JFrame jframe = new JFrame();
-		Timer timer = new Timer(20, this);
+		Timer timer = new Timer(16, this);
 
 		renderObject = new Render();
 		rand = new Random();
@@ -52,7 +52,7 @@ public class Game implements ActionListener, KeyListener{
 
 	public void addColumn(boolean start){
 		int space = 800;
-		int width = 20 + rand.nextInt(150);
+		int width = 12 + rand.nextInt(150);
 		int height = 50 + rand.nextInt(100);
 
 		if (start){
@@ -100,7 +100,7 @@ public class Game implements ActionListener, KeyListener{
 	}
 
 	public void actionPerformed(ActionEvent e){
-		int speed = 12;
+		int speed = 10;
 
 		if (started){
 			for (int i = 0; i < columns.size(); i++){
