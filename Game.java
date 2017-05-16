@@ -130,7 +130,7 @@ public class Game implements ActionListener, KeyListener{
 			hero.y += jump;
 
 			for (Rectangle column : columns){
-		if (column.y == 0 && hero.x + hero.width / 2 > column.x + column.width / 2 - 3 && hero.x + hero.width / 2 < column.x + column.width / 2 + 10){
+if (column.y == 0 && hero.x + hero.width / 2 > column.x + column.width / 2 - 3 && hero.x + hero.width / 2 < column.x + column.width / 2 + 10){
 					score++;
 				}
 
