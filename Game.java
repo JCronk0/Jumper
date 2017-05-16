@@ -8,14 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-public class Game implements ActionListener, MouseListener, KeyListener{
+public class Game implements ActionListener, KeyListener{
 
 	public static Game jumper;
 	public final int WIDTH = 800, HEIGHT = 800;
@@ -40,7 +38,6 @@ public class Game implements ActionListener, MouseListener, KeyListener{
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jframe.setSize(WIDTH, HEIGHT);
 		jframe.setLocationRelativeTo(null);
-		jframe.addMouseListener(this);
 		jframe.addKeyListener(this);
 		jframe.setResizable(false);
 		jframe.setVisible(true);
@@ -206,26 +203,10 @@ public class Game implements ActionListener, MouseListener, KeyListener{
 		jumper = new Game();
 	}
 
-	public void mouseClicked(MouseEvent e){
-		jump();
-	}
-
 	public void keyReleased(KeyEvent e){
 		if (e.getKeyCode() == KeyEvent.VK_SPACE){
 			jump();
 		}
-	}
-	
-	public void mousePressed(MouseEvent e){
-	}
-
-	public void mouseReleased(MouseEvent e){
-	}
-
-	public void mouseEntered(MouseEvent e){
-	}
-
-	public void mouseExited(MouseEvent e){
 	}
 
 	public void keyTyped(KeyEvent e){
