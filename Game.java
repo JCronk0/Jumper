@@ -20,7 +20,7 @@ public class Game implements ActionListener, KeyListener{
 	public Render renderObject;
 	public Rectangle hero;
 	public ArrayList<Rectangle> columns;
-	public int ticks, jump, score;
+	public int jump, score;
 	public boolean gameOver, started;
 	public Random rand;
 
@@ -95,14 +95,12 @@ public class Game implements ActionListener, KeyListener{
 				jump = 0;
 			}
 
-			jump -= 35;
+			jump -= 50;
 		}
 	}
 
 	public void actionPerformed(ActionEvent e){
 		int speed = 12;
-
-		ticks++;   
 
 		if (started){
 			for (int i = 0; i < columns.size(); i++){
@@ -111,8 +109,8 @@ public class Game implements ActionListener, KeyListener{
 				column.x -= speed;
 			}
 
-			if (ticks % 2 == 0 && jump < 15){
-				jump += 5;
+			if (jump < 15){
+				jump += 4;
 			}
 
 			for (int i = 0; i < columns.size(); i++){
