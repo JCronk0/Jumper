@@ -17,7 +17,7 @@ import javax.swing.Timer;
 //Main method
 public class Game implements ActionListener, KeyListener{
 
-	//Game integers
+	//Game variables
 	public static Game jumper;
 	public final int WIDTH = 800, HEIGHT = 800;
 	public Render renderObject;
