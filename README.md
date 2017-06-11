@@ -1,2 +1,2 @@
-# Jumper
+# Java Games
 by Josh Cronk
